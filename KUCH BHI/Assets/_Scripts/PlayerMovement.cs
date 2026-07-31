@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float jumpForce = 12f;
+    [SerializeField] private float jumpForce = 5f;
 
     [Header("Ground Check Settings")]
     [SerializeField] private Transform groundCheck;
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
             if (horizontalInput > 0)
                 transform.localScale = new Vector3(1, 1, 1);
             else if (horizontalInput < 0)
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
