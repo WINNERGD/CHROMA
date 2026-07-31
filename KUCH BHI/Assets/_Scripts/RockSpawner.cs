@@ -1,87 +1,149 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RockSpawner : MonoBehaviour
 {
-    [Header("Spawn Settings")]
+    [Header("Prefabs")]
     [SerializeField] private GameObject rockPrefab;
     [SerializeField] private GameObject warningIndicatorPrefab;
+
+    [Header("Camera Reference")]
+    [SerializeField] private Camera mainCamera;
+
+    [Header("Spawn Boundaries")]
     [SerializeField] private Transform leftBoundary;
     [SerializeField] private Transform rightBoundary;
-    [SerializeField] private float spawnYHeight = 10f;
-    [SerializeField] private float telegraphDelay = 1.2f; // Time before rock spawns
+    [SerializeField] private float spawnYHeight = 12f;
+
+    [Header("Multi-Rock Cluster Settings")]
+    [SerializeField] private int minRocksPerWave = 2;
+    [SerializeField] private int maxRocksPerWave = 3;
+    [SerializeField] private float minDistanceBetweenRocks = 1.5f;
+
+    [Header("Timing")]
+    [SerializeField] private float telegraphDelay = 1.0f;
     [SerializeField] private LayerMask groundLayer;
 
-    [Header("Screen Shake")]
-    [SerializeField] private Transform cameraTransform;
-    [SerializeField] private float shakeIntensity = 0.2f;
+    [Header("Camera Shake Settings")]
+    [SerializeField] private bool triggerCameraShake = true;
+    [SerializeField] private float shakeDuration = 0.3f;
+    [SerializeField] private float shakeIntensity = 0.35f;
 
-    private Coroutine spawnRoutine;
+    private Coroutine shakeCoroutine;
+    private Vector3 originalCameraPos;
 
-    public void StartSpawning(float interval)
+    private void Awake()
     {
-        if (spawnRoutine != null) StopCoroutine(spawnRoutine);
-        spawnRoutine = StartCoroutine(SpawnSequence(interval));
-    }
-
-    public void StopSpawning()
-    {
-        if (spawnRoutine != null) StopCoroutine(spawnRoutine);
-    }
-
-    private IEnumerator SpawnSequence(float interval)
-    {
-        while (true)
+        if (mainCamera == null)
         {
-            yield return new WaitForSeconds(interval);
+            mainCamera = Camera.main;
+        }
 
-            // 1. Pick a random X coordinate within the arena boundaries
-            float randomX = Random.Range(leftBoundary.position.x, rightBoundary.position.x);
-            Vector3 spawnPos = new Vector3(randomX, spawnYHeight, 0f);
+        if (mainCamera != null)
+        {
+            originalCameraPos = mainCamera.transform.localPosition;
+        }
+    }
 
-            // 2. Raycast down to find the floor position
-            RaycastHit2D groundHit = Physics2D.Raycast(spawnPos, Vector2.down, 50f, groundLayer);
+    /// <summary>
+    /// Triggered by BossController on Fist Stomp
+    /// </summary>
+    public void TriggerSingleWave()
+    {
+        StartCoroutine(SpawnWaveRoutine());
+    }
+
+    private IEnumerator SpawnWaveRoutine()
+    {
+        int rockCount = Random.Range(minRocksPerWave, maxRocksPerWave + 1);
+        List<Vector3> waveSpawnPositions = GetUniqueSpawnPositions(rockCount);
+
+        // 1. Rumble Camera before warning
+        if (triggerCameraShake && mainCamera != null)
+        {
+            if (shakeCoroutine != null) StopCoroutine(shakeCoroutine);
+            shakeCoroutine = StartCoroutine(ShakeCameraRoutine());
+        }
+
+        yield return new WaitForSeconds(shakeDuration);
+
+        // 2. Spawn warning indicators
+        foreach (Vector3 spawnPos in waveSpawnPositions)
+        {
+            RaycastHit2D groundHit = Physics2D.Raycast(spawnPos, Vector2.down, 100f, groundLayer);
 
             if (groundHit.collider != null)
             {
-                // Spawn indicator slightly above ground contact point
-                Vector3 indicatorPos = groundHit.point + new Vector2(0f, 0.05f);
-                GameObject indicatorObj = Instantiate(warningIndicatorPrefab, indicatorPos, Quaternion.identity);
+                Vector3 indicatorPos = new Vector3(spawnPos.x, groundHit.point.y + 0.05f, 0f);
+                GameObject indicator = Instantiate(warningIndicatorPrefab, indicatorPos, Quaternion.identity);
 
-                if (indicatorObj.TryGetComponent<WarningIndicator>(out WarningIndicator warning))
+                if (indicator.TryGetComponent<WarningIndicator>(out WarningIndicator warning))
                 {
                     warning.AnimateWarning(telegraphDelay);
                 }
             }
+        }
 
-            // 3. Wait for the warning indicator duration
-            yield return new WaitForSeconds(telegraphDelay);
+        // 3. Telegraph Delay
+        yield return new WaitForSeconds(telegraphDelay);
 
-            // 4. Drop the rock
+        // 4. Drop Rocks
+        foreach (Vector3 spawnPos in waveSpawnPositions)
+        {
             Instantiate(rockPrefab, spawnPos, Quaternion.identity);
-
-            // 5. Trigger camera rumble
-            StartCoroutine(DoScreenShake(0.15f));
         }
     }
 
-    private IEnumerator DoScreenShake(float duration)
+    private IEnumerator ShakeCameraRoutine()
     {
-        if (cameraTransform == null) yield break;
-
-        Vector3 originalPos = cameraTransform.localPosition;
         float elapsed = 0f;
+        originalCameraPos = mainCamera.transform.localPosition;
 
-        while (elapsed < duration)
+        while (elapsed < shakeDuration)
         {
-            float x = Random.Range(-1f, 1f) * shakeIntensity;
-            float y = Random.Range(-1f, 1f) * shakeIntensity;
+            float offsetX = Random.Range(-1f, 1f) * shakeIntensity;
+            float offsetY = Random.Range(-1f, 1f) * shakeIntensity;
 
-            cameraTransform.localPosition = originalPos + new Vector3(x, y, 0f);
+            mainCamera.transform.localPosition = new Vector3(originalCameraPos.x + offsetX, originalCameraPos.y + offsetY, originalCameraPos.z);
+
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        cameraTransform.localPosition = originalPos;
+        mainCamera.transform.localPosition = originalCameraPos;
+    }
+
+    private List<Vector3> GetUniqueSpawnPositions(int count)
+    {
+        List<Vector3> positions = new List<Vector3>();
+        int maxAttempts = 20;
+
+        for (int i = 0; i < count; i++)
+        {
+            float randomX = 0f;
+            bool validPos = false;
+            int attempts = 0;
+
+            while (!validPos && attempts < maxAttempts)
+            {
+                attempts++;
+                randomX = Random.Range(leftBoundary.position.x, rightBoundary.position.x);
+                validPos = true;
+
+                foreach (Vector3 existingPos in positions)
+                {
+                    if (Mathf.Abs(existingPos.x - randomX) < minDistanceBetweenRocks)
+                    {
+                        validPos = false;
+                        break;
+                    }
+                }
+            }
+
+            positions.Add(new Vector3(randomX, spawnYHeight, 0f));
+        }
+
+        return positions;
     }
 }

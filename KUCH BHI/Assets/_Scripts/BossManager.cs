@@ -69,7 +69,7 @@ public class BossManager : MonoBehaviour
     private void DefeatBoss()
     {
         if (bossLaser != null) bossLaser.StopLaser();
-        if (rockSpawner != null) rockSpawner.StopSpawning();
+        //if (rockSpawner != null) rockSpawner.StopSpawning();
         Debug.Log("Boss Defeated!");
     }
 }
