@@ -4,12 +4,12 @@ using UnityEngine;
 public class FallingRock : MonoBehaviour
 {
     [Header("Rock Settings")]
-    [SerializeField] private float damageAmount = 1f;
+    [SerializeField] private int damageHits = 1; // 1 Hit = 25% grey damage
     [SerializeField] private float knockbackForce = 5f;
     [SerializeField] private float lifetimeAfterImpact = 0.2f;
 
     [Header("Effects")]
-    [SerializeField] private GameObject impactEffectPrefab; // Optional visual hit effect
+    [SerializeField] private GameObject impactEffectPrefab;
 
     private bool hasHit = false;
 
@@ -23,8 +23,7 @@ public class FallingRock : MonoBehaviour
 
             if (collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth health))
             {
-                // Deal 1 damage + apply knockback and trigger 1s invulnerability
-                health.TakeDamageWithKnockback(damageAmount, transform.position, knockbackForce);
+                health.TakeDamageWithKnockback(damageHits, transform.position, knockbackForce);
             }
 
             DestroyRock();
@@ -43,7 +42,6 @@ public class FallingRock : MonoBehaviour
             Instantiate(impactEffectPrefab, transform.position, Quaternion.identity);
         }
 
-        // Destroy rock upon impact after a split second
         Destroy(gameObject, lifetimeAfterImpact);
     }
 }

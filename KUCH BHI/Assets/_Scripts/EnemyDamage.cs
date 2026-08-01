@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    [SerializeField] private float damageAmount = 10f;
+    [SerializeField] private int damageHits = 1; // 1 hit = 25% grey damage
     [SerializeField] private float knockbackForce = 8f;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -11,8 +11,7 @@ public class EnemyDamage : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth health))
             {
-                // Passes damage, attacker position, and knockback force
-                health.TakeDamageWithKnockback(damageAmount, transform.position, knockbackForce);
+                health.TakeDamageWithKnockback(damageHits, transform.position, knockbackForce);
             }
         }
     }

@@ -8,18 +8,18 @@ public class BossController : MonoBehaviour
     [SerializeField] private LineRenderer laserLineRenderer;
     [SerializeField] private Transform laserOrigin;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private GameObject[] chainVisuals; // 3 chain objects in Hierarchy
+    [SerializeField] private GameObject[] chainVisuals;
 
     [Header("Phase Attack Intervals")]
-    [SerializeField] private float phase0Interval = 6.0f; // 0 buttons pressed
-    [SerializeField] private float phase1Interval = 4.5f; // 1 button pressed
-    [SerializeField] private float phase2Interval = 3.2f; // 2 buttons pressed
-    [SerializeField] private float phase3Interval = 2.0f; // 3 buttons pressed
+    [SerializeField] private float phase0Interval = 6.0f;
+    [SerializeField] private float phase1Interval = 4.5f;
+    [SerializeField] private float phase2Interval = 3.2f;
+    [SerializeField] private float phase3Interval = 2.0f;
 
     [Header("Grey Laser Settings")]
     [SerializeField] private float laserChargeTime = 1.0f;
     [SerializeField] private float laserDuration = 1.2f;
-    [SerializeField] private float laserDamagePerSecond = 20f;
+    [SerializeField] private float laserDamageInterval = 0.5f; // Deals 1 hit every 0.5 seconds inside laser
     [SerializeField] private LayerMask playerLayer;
 
     private int buttonsPressedCount = 0;
@@ -54,13 +54,10 @@ public class BossController : MonoBehaviour
         while (!isBossDefeated)
         {
             yield return new WaitForSeconds(currentInterval * 0.5f);
-
-            // 1. Boss Fist Stomp (Triggers shake, warning, and rocks)
             yield return StartCoroutine(PerformFistStomp());
 
             yield return new WaitForSeconds(currentInterval * 0.5f);
 
-            // 2. Grey Laser Beam Attack
             if (!isBossDefeated && playerTransform != null)
             {
                 yield return StartCoroutine(FireGreyLaser());
@@ -82,7 +79,6 @@ public class BossController : MonoBehaviour
     {
         if (laserLineRenderer == null || laserOrigin == null) yield break;
 
-        // Telegraph charge phase
         laserLineRenderer.enabled = true;
         laserLineRenderer.startColor = new Color(0.7f, 0.7f, 0.7f, 0.2f);
         laserLineRenderer.endColor = new Color(0.7f, 0.7f, 0.7f, 0.2f);
@@ -103,11 +99,12 @@ public class BossController : MonoBehaviour
             yield return null;
         }
 
-        // Active damage phase
         laserLineRenderer.startColor = new Color(0.5f, 0.5f, 0.5f, 1f);
         laserLineRenderer.endColor = new Color(0.3f, 0.3f, 0.3f, 1f);
 
         timer = 0f;
+        float damageTimer = 0f;
+
         while (timer < laserDuration)
         {
             timer += Time.deltaTime;
@@ -118,13 +115,17 @@ public class BossController : MonoBehaviour
             laserLineRenderer.SetPosition(0, startPos);
             laserLineRenderer.SetPosition(1, endPos);
 
-            // Raycast damage check
             RaycastHit2D hit = Physics2D.Raycast(startPos, targetDirection, 30f, playerLayer);
             if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
-                if (hit.collider.TryGetComponent<PlayerHealth>(out PlayerHealth health))
+                damageTimer += Time.deltaTime;
+                if (damageTimer >= laserDamageInterval)
                 {
-                    health.TakeDirectDamage(laserDamagePerSecond * Time.deltaTime);
+                    if (hit.collider.TryGetComponent<PlayerHealth>(out PlayerHealth health))
+                    {
+                        health.TakeDirectDamage(1); // 1 Hit (25%)
+                    }
+                    damageTimer = 0f;
                 }
             }
 
@@ -140,13 +141,11 @@ public class BossController : MonoBehaviour
 
         buttonsPressedCount++;
 
-        // Hide chain graphics step-by-step
         if (buttonsPressedCount - 1 < chainVisuals.Length && chainVisuals[buttonsPressedCount - 1] != null)
         {
             chainVisuals[buttonsPressedCount - 1].SetActive(false);
         }
 
-        // Accelerate intervals per button
         switch (buttonsPressedCount)
         {
             case 1:

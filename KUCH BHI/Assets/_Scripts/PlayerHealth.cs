@@ -11,17 +11,22 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("UI & Visual References")]
     [SerializeField] private SpriteRenderer playerSpriteRenderer;
-    [SerializeField] private Image uiGreyFillImage; // UI Image set to Image Type: Filled (Vertical, Bottom)
-    [SerializeField] private GameOverUI gameOverUI;
+    [SerializeField] private Image uiGreyFillImage; // UI Image Type: Filled (Vertical, Bottom)
 
     [Header("Colors")]
     [SerializeField] private Color normalColor = Color.white;
-    [SerializeField] private Color fullGreyColor = new Color(0.5f, 0.5f, 0.5f, 1f);
+    [SerializeField] private Color fullGreyColor = new Color(0.4f, 0.4f, 0.4f, 1f);
 
     [Header("Invulnerability Settings")]
     [SerializeField] private float invulnerabilityDuration = 1.0f;
     [SerializeField] private float flashInterval = 0.1f;
     private bool isInvulnerable = false;
+
+    [Header("Respawn Settings")]
+    [SerializeField] private Transform spawnPoint; // Drag your SpawnPoint GameObject here
+    [SerializeField] private float respawnDelay = 0.5f; // Short pause before respawning
+    private Vector3 initialSpawnPosition;
+    private bool isDead = false;
 
     private Rigidbody2D rb;
 
@@ -33,22 +38,27 @@ public class PlayerHealth : MonoBehaviour
         if (playerSpriteRenderer == null)
             playerSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        // Store initial position in case spawnPoint transform isn't assigned
+        if (spawnPoint != null)
+        {
+            initialSpawnPosition = spawnPoint.position;
+        }
+        else
+        {
+            initialSpawnPosition = transform.position;
+        }
+
         UpdateHealthVisuals();
     }
 
-    /// <summary>
-    /// Call when player takes a hit with knockback (e.g. rocks, patrolling enemies)
-    /// </summary>
-    public void TakeDamageWithKnockback(float damageAmount, Vector2 attackerPosition, float knockbackForce)
+    public void TakeDamageWithKnockback(int damageHits, Vector2 attackerPosition, float knockbackForce)
     {
-        if (isInvulnerable || currentHealth <= 0) return;
+        if (isInvulnerable || isDead || currentHealth <= 0) return;
 
-        int hits = Mathf.Max(1, Mathf.RoundToInt(damageAmount));
-        currentHealth = Mathf.Clamp(currentHealth - hits, 0, maxHealth);
-
+        currentHealth = Mathf.Clamp(currentHealth - damageHits, 0, maxHealth);
         UpdateHealthVisuals();
 
-        // Apply knockback force
+        // Knockback Impulse
         float knockbackDir = Mathf.Sign(transform.position.x - attackerPosition.x);
         if (knockbackDir == 0) knockbackDir = 1f;
         Vector2 force = new Vector2(knockbackDir * knockbackForce, knockbackForce * 0.5f);
@@ -57,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            DieAndRespawn();
         }
         else
         {
@@ -65,42 +75,31 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Call for direct/continuous damage (e.g. spores, boss laser)
-    /// </summary>
-    public void TakeDirectDamage(float damageAmount)
+    public void TakeDirectDamage(int damageHits)
     {
-        if (currentHealth <= 0) return;
+        if (isDead || currentHealth <= 0) return;
 
-        int hits = Mathf.Max(1, Mathf.RoundToInt(damageAmount));
-        currentHealth = Mathf.Clamp(currentHealth - hits, 0, maxHealth);
-
+        currentHealth = Mathf.Clamp(currentHealth - damageHits, 0, maxHealth);
         UpdateHealthVisuals();
 
         if (currentHealth <= 0)
         {
-            Die();
+            DieAndRespawn();
         }
     }
 
     private void UpdateHealthVisuals()
     {
-        // Calculate health percentage:
-        // 4 Hits Left = 1.0 (0% Grey)
-        // 3 Hits Left = 0.75 (25% Grey)
-        // 2 Hits Left = 0.50 (50% Grey)
-        // 1 Hit Left  = 0.25 (75% Grey)
-        // 0 Hits Left = 0.00 (100% Fully Grey)
         float healthPercent = (float)currentHealth / maxHealth;
         float greyPercent = 1f - healthPercent;
 
-        // 1. Update UI Indicator (Fills grey from bottom to top as health decreases)
+        // 1. UI Health Bar fill
         if (uiGreyFillImage != null)
         {
             uiGreyFillImage.fillAmount = greyPercent;
         }
 
-        // 2. Tint Player Sprite toward Grey based on damage taken
+        // 2. Player Sprite Tint Lerp
         if (playerSpriteRenderer != null)
         {
             playerSpriteRenderer.color = Color.Lerp(normalColor, fullGreyColor, greyPercent);
@@ -126,14 +125,41 @@ public class PlayerHealth : MonoBehaviour
         isInvulnerable = false;
     }
 
-    private void Die()
+    private void DieAndRespawn()
     {
-        Debug.Log("Player Dead - 4 Hits Taken");
+        if (isDead) return;
+        StartCoroutine(RespawnRoutine());
+    }
+
+    private IEnumerator RespawnRoutine()
+    {
+        isDead = true;
+
+        // Stop movement
+        rb.linearVelocity = Vector2.zero;
+
+        // Wait brief delay for feedback
+        yield return new WaitForSeconds(respawnDelay);
+
+        // Move to Spawn Point
+        Vector3 targetRespawnPosition = spawnPoint != null ? spawnPoint.position : initialSpawnPosition;
+        transform.position = targetRespawnPosition;
+
+        // Reset Physics
+        rb.linearVelocity = Vector2.zero;
+
+        // Reset Health & Visuals
+        currentHealth = maxHealth;
+        isDead = false;
         UpdateHealthVisuals();
 
-        if (gameOverUI != null)
-        {
-            gameOverUI.ShowGameOver();
-        }
+        // Grant temporary invulnerability post-respawn so player isn't instantly hit again
+        StartCoroutine(InvulnerabilityRoutine());
+    }
+
+    // Optional: Call this from a Checkpoint script to update spawn position dynamically
+    public void SetNewSpawnPoint(Transform newSpawnPoint)
+    {
+        spawnPoint = newSpawnPoint;
     }
 }

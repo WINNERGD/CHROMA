@@ -8,17 +8,15 @@ public class BossLaser : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private LayerMask hitLayers;
     [SerializeField] private float maxDistance = 30f;
-    [SerializeField] private float damagePerSecond = 35f;
+    [SerializeField] private float tickInterval = 0.5f; // Deals 1 hit every 0.5s inside beam
 
     [Header("Telegraph & Attack Timings")]
-    [Tooltip("How long the thin warning line shows before the full laser fires")]
-    [SerializeField] private float telegraphDuration = 1.2f;
-    [Tooltip("How long the active lethal beam stays on screen")]
-    [SerializeField] private float laserActiveDuration = 1.0f;
+    [SerializeField] private float telegraphDuration = 0.5f;
+    [SerializeField] private float laserActiveDuration = 0.5f;
 
     [Header("Colors")]
-    [SerializeField] private Color warningColor = new Color(1f, 0.2f, 0.2f, 0.35f); // Semi-transparent Red/Grey
-    [SerializeField] private Color activeColor = new Color(0.3f, 0.3f, 0.3f, 1.0f);     // Solid Dark Grey
+    [SerializeField] private Color warningColor = new Color(1f, 0.2f, 0.2f, 0.35f);
+    [SerializeField] private Color activeColor = new Color(0.3f, 0.3f, 0.3f, 1.0f);
 
     private Transform playerTransform;
     private Coroutine attackRoutine;
@@ -33,9 +31,6 @@ public class BossLaser : MonoBehaviour
         if (player != null) playerTransform = player.transform;
     }
 
-    /// <summary>
-    /// Starts the laser routine with randomized delay ranges between attacks.
-    /// </summary>
     public void StartRandomLaserCycle(float minInterval, float maxInterval)
     {
         currentMinInterval = minInterval;
@@ -55,24 +50,20 @@ public class BossLaser : MonoBehaviour
     {
         while (true)
         {
-            // 1. Pick a random interval delay before starting telegraph
             float randomWait = Random.Range(currentMinInterval, currentMaxInterval);
             yield return new WaitForSeconds(randomWait);
 
             if (playerTransform == null) yield break;
 
-            // ----------------------------------------------------
-            // STEP 2: TELEGRAPH WARNING PHASE
-            // ----------------------------------------------------
+            // Telegraph
             lineRenderer.enabled = true;
             lineRenderer.startColor = warningColor;
             lineRenderer.endColor = warningColor;
-            lineRenderer.startWidth = 0.05f; // Thin line
+            lineRenderer.startWidth = 0.05f;
             lineRenderer.endWidth = 0.05f;
 
             float telegraphTimer = telegraphDuration;
 
-            // Target tracks the player's movement during telegraph
             while (telegraphTimer > 0)
             {
                 Vector2 aimDirection = (playerTransform.position - firePoint.position).normalized;
@@ -82,29 +73,32 @@ public class BossLaser : MonoBehaviour
                 yield return null;
             }
 
-            // ----------------------------------------------------
-            // STEP 3: LETHAL BEAM FIRING PHASE
-            // ----------------------------------------------------
+            // Firing
             lineRenderer.startColor = activeColor;
             lineRenderer.endColor = activeColor;
-            lineRenderer.startWidth = 0.5f; // Thick beam
+            lineRenderer.startWidth = 0.5f;
             lineRenderer.endWidth = 0.5f;
 
-            // Freeze direction at moment of firing
             Vector2 fireDirection = (playerTransform.position - firePoint.position).normalized;
 
             float activeTimer = laserActiveDuration;
+            float tickTimer = 0f;
+
             while (activeTimer > 0)
             {
                 RaycastHit2D hit = Physics2D.Raycast(firePoint.position, fireDirection, maxDistance, hitLayers);
                 SetLaserPositions(fireDirection);
 
-                // Apply continuous damage if player touches beam
                 if (hit.collider != null && hit.collider.CompareTag("Player"))
                 {
-                    if (hit.collider.TryGetComponent<PlayerHealth>(out PlayerHealth health))
+                    tickTimer += Time.deltaTime;
+                    if (tickTimer >= tickInterval)
                     {
-                        health.TakeDirectDamage(damagePerSecond * Time.deltaTime);
+                        if (hit.collider.TryGetComponent<PlayerHealth>(out PlayerHealth health))
+                        {
+                            health.TakeDirectDamage(1); // 1 Hit
+                        }
+                        tickTimer = 0f;
                     }
                 }
 
@@ -112,7 +106,6 @@ public class BossLaser : MonoBehaviour
                 yield return null;
             }
 
-            // Disable line after firing until next random cycle
             lineRenderer.enabled = false;
         }
     }

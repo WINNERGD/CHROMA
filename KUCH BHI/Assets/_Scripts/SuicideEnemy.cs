@@ -34,11 +34,8 @@ public class SuicideEnemy : MonoBehaviour
         }
         else if (distToPlayer <= detectRange)
         {
-            // Move toward player
             Vector2 direction = (player.position - transform.position).normalized;
             rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
-
-            // Flip facing direction
             transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
         }
         else
@@ -52,14 +49,13 @@ public class SuicideEnemy : MonoBehaviour
         isExploding = true;
         rb.linearVelocity = Vector2.zero;
 
-        // Optional direct explosion damage (bypasses invulnerability)
+        // Instant explosion damage (1 hit = 25%)
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, explodeRange, LayerMask.GetMask("Player"));
         if (playerCollider != null && playerCollider.TryGetComponent<PlayerHealth>(out PlayerHealth health))
         {
-            health.TakeDirectDamage(20f); // Explosion flat damage
+            health.TakeDirectDamage(1);
         }
 
-        // Spawn Spore Cloud
         if (sporeCloudPrefab != null)
         {
             Instantiate(sporeCloudPrefab, transform.position, Quaternion.identity);

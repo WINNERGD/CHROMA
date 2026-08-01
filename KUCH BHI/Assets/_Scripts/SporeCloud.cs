@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class SporeCloud : MonoBehaviour
 {
-    [SerializeField] private float damagePerSecond = 1f;
+    [SerializeField] private float damageInterval = 1.0f; // Deals 1 hit every second in cloud
     [SerializeField] private float cloudDuration = 5f;
+
+    private float timer = 0f;
 
     private void Start()
     {
@@ -14,11 +16,23 @@ public class SporeCloud : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (other.TryGetComponent<PlayerHealth>(out PlayerHealth health))
+            timer += Time.deltaTime;
+            if (timer >= damageInterval)
             {
-                // Direct continuous damage: bypasses invulnerability and knockback
-                health.TakeDirectDamage(damagePerSecond * Time.deltaTime);
+                if (other.TryGetComponent<PlayerHealth>(out PlayerHealth health))
+                {
+                    health.TakeDirectDamage(1); // 1 Hit (25%) per interval
+                }
+                timer = 0f;
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            timer = 0f;
         }
     }
 }
