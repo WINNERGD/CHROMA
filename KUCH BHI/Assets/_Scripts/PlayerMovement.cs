@@ -38,9 +38,9 @@ public class PlayerMovement : MonoBehaviour
         if (pushPull == null || !pushPull.IsGrabbing)
         {
             if (horizontalInput > 0)
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             else if (horizontalInput < 0)
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
         }
     }
 
