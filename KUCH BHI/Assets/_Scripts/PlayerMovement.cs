@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     private Rigidbody2D rb;
+    private Animator anim; // Reference to the Animator
     private float horizontalInput;
     private bool isGrounded;
     private bool jumpRequested;
@@ -22,11 +23,21 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         pushPull = GetComponent<PlayerPushPull>(); // Grab reference
+        anim = GetComponent<Animator>();           // Grab Animator reference
     }
 
     private void Update()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        // --- ANIMATION CONTROL ---
+        if (anim != null)
+        {
+            // If the player is giving movement input, play animation (speed = 1).
+            // When stationary, freeze the walk frame (speed = 0).
+            bool isMoving = Mathf.Abs(horizontalInput) > 0.01f;
+            anim.speed = isMoving ? 1f : 0f;
+        }
 
         // Only jump if not currently grabbing a heavy object
         if (Input.GetButtonDown("Jump") && isGrounded && (pushPull == null || !pushPull.IsGrabbing))
