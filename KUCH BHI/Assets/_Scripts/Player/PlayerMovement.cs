@@ -12,8 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
+    // The base size of your player (0.1f)
+    public float BaseScaleMagnitude { get; private set; } = 0.1f;
+
     private Rigidbody2D rb;
-    private Animator anim; // Reference to the Animator
+    private Animator anim;
     private float horizontalInput;
     private bool isGrounded;
     private bool jumpRequested;
@@ -22,8 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        pushPull = GetComponent<PlayerPushPull>(); // Grab reference
-        anim = GetComponent<Animator>();           // Grab Animator reference
+        pushPull = GetComponent<PlayerPushPull>();
+        anim = GetComponent<Animator>();
+
+        // Automatically store initial Y scale magnitude (0.1f)
+        BaseScaleMagnitude = Mathf.Abs(transform.localScale.y);
     }
 
     private void Update()
@@ -33,37 +39,37 @@ public class PlayerMovement : MonoBehaviour
         // --- ANIMATION CONTROL ---
         if (anim != null)
         {
-            // If the player is giving movement input, play animation (speed = 1).
-            // When stationary, freeze the walk frame (speed = 0).
             bool isMoving = Mathf.Abs(horizontalInput) > 0.01f;
             anim.speed = isMoving ? 1f : 0f;
         }
 
-        // Only jump if not currently grabbing a heavy object
+        // Only jump if grounded and not grabbing an object
         if (Input.GetButtonDown("Jump") && isGrounded && (pushPull == null || !pushPull.IsGrabbing))
         {
             jumpRequested = true;
         }
 
-        // DO NOT flip character sprite if grabbing/pulling an object
+        // --- SPRITE FLIPPING ---
+        // Adjust sprite direction while preserving current scale proportions (even on platforms)
         if (pushPull == null || !pushPull.IsGrabbing)
         {
             if (horizontalInput > 0)
-                transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            {
+                SetFacingDirection(1f);
+            }
             else if (horizontalInput < 0)
-                transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
+            {
+                SetFacingDirection(-1f);
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        // 1. Check if standing on the ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // 2. Apply horizontal velocity
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
-        // 3. Apply jump force if requested
         if (jumpRequested)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -71,7 +77,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Visualize the ground check circle in the Scene view for easy debugging
+    // Flips the horizontal scale cleanly while accounting for platform parenting
+    public void SetFacingDirection(float direction)
+    {
+        Vector3 currentScale = transform.localScale;
+        float sign = Mathf.Sign(direction);
+
+        transform.localScale = new Vector3(
+            Mathf.Abs(currentScale.x) * sign,
+            currentScale.y,
+            currentScale.z
+        );
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
