@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 714495}
   - component: {fileID: 714497}
   - component: {fileID: 714496}
+  - component: {fileID: 714498}
   m_Layer: 0
   m_Name: pressure tile_0 (13)
   m_TagString: Untagged
@@ -257,6 +258,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &714498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 714495}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4503716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57117634}
   - component: {fileID: 57117635}
+  - component: {fileID: 57117636}
   m_Layer: 0
   m_Name: Circle (4)
   m_TagString: Untagged
@@ -1355,6 +1382,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &57117636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57117633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &64862565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1775,7 @@ GameObject:
   - component: {fileID: 89252011}
   - component: {fileID: 89252013}
   - component: {fileID: 89252012}
+  - component: {fileID: 89252014}
   m_Layer: 0
   m_Name: pressure tile_0 (3)
   m_TagString: Untagged
@@ -1860,6 +1903,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &89252014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89252010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 89252011}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &91843369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,6 +2348,7 @@ GameObject:
   - component: {fileID: 120560909}
   - component: {fileID: 120560911}
   - component: {fileID: 120560910}
+  - component: {fileID: 120560912}
   m_Layer: 0
   m_Name: pressure tile_0 (9)
   m_TagString: Untagged
@@ -2407,6 +2476,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &120560912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120560908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 120560909}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &130959262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2820,8 @@ GameObject:
   - component: {fileID: 145800019}
   - component: {fileID: 145800021}
   - component: {fileID: 145800020}
+  - component: {fileID: 145800023}
+  - component: {fileID: 145800022}
   m_Layer: 3
   m_Name: platform 3_0 (3)
   m_TagString: Untagged
@@ -2853,6 +2949,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &145800022
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145800018}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &145800023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145800018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &161048241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,6 +3321,8 @@ GameObject:
   - component: {fileID: 171123553}
   - component: {fileID: 171123555}
   - component: {fileID: 171123554}
+  - component: {fileID: 171123557}
+  - component: {fileID: 171123556}
   m_Layer: 3
   m_Name: platform 3_0 (8)
   m_TagString: Untagged
@@ -3311,6 +3450,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &171123556
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171123552}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &171123557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171123552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &175007326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,6 +3593,7 @@ GameObject:
   - component: {fileID: 181157013}
   - component: {fileID: 181157015}
   - component: {fileID: 181157014}
+  - component: {fileID: 181157016}
   m_Layer: 0
   m_Name: pressure tile_0 (2)
   m_TagString: Untagged
@@ -3540,6 +3721,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &181157016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181157012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 181157013}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &183390826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,7 +3757,7 @@ GameObject:
   - component: {fileID: 183390827}
   - component: {fileID: 183390829}
   - component: {fileID: 183390828}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform 2_0 (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3965,6 +4171,8 @@ GameObject:
   - component: {fileID: 219433530}
   - component: {fileID: 219433532}
   - component: {fileID: 219433531}
+  - component: {fileID: 219433534}
+  - component: {fileID: 219433533}
   m_Layer: 3
   m_Name: platform 3_0 (11)
   m_TagString: Untagged
@@ -4092,6 +4300,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &219433533
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219433529}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &219433534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219433529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &220569902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,6 +4994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274430361}
   - component: {fileID: 274430362}
+  - component: {fileID: 274430363}
   m_Layer: 0
   m_Name: Circle (7)
   m_TagString: Untagged
@@ -4826,6 +5076,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &274430363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274430360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &278302944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6305,6 +6570,8 @@ GameObject:
   - component: {fileID: 413918766}
   - component: {fileID: 413918768}
   - component: {fileID: 413918767}
+  - component: {fileID: 413918770}
+  - component: {fileID: 413918769}
   m_Layer: 3
   m_Name: platform 3_0 (9)
   m_TagString: Untagged
@@ -6432,6 +6699,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &413918769
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413918765}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &413918770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413918765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &417286600
 GameObject:
   m_ObjectHideFlags: 0
@@ -6622,6 +6930,7 @@ GameObject:
   - component: {fileID: 418588294}
   - component: {fileID: 418588296}
   - component: {fileID: 418588295}
+  - component: {fileID: 418588297}
   m_Layer: 0
   m_Name: pressure tile_0 (10)
   m_TagString: Untagged
@@ -6749,6 +7058,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &418588297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418588293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 418588294}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &421373355
 GameObject:
   m_ObjectHideFlags: 0
@@ -7218,6 +7552,8 @@ GameObject:
   - component: {fileID: 478694907}
   - component: {fileID: 478694909}
   - component: {fileID: 478694908}
+  - component: {fileID: 478694911}
+  - component: {fileID: 478694910}
   m_Layer: 3
   m_Name: platform 4_0 (5)
   m_TagString: Untagged
@@ -7345,6 +7681,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &478694910
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478694906}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &478694911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478694906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &478792666
 GameObject:
   m_ObjectHideFlags: 0
@@ -8039,6 +8416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507442450}
   - component: {fileID: 507442451}
+  - component: {fileID: 507442452}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -8120,6 +8498,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &507442452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507442449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &511018848
 GameObject:
   m_ObjectHideFlags: 0
@@ -8131,6 +8524,8 @@ GameObject:
   - component: {fileID: 511018849}
   - component: {fileID: 511018851}
   - component: {fileID: 511018850}
+  - component: {fileID: 511018853}
+  - component: {fileID: 511018852}
   m_Layer: 3
   m_Name: platform 4_0 (1)
   m_TagString: Untagged
@@ -8258,6 +8653,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &511018852
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511018848}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &511018853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511018848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &529527299
 GameObject:
   m_ObjectHideFlags: 0
@@ -8269,6 +8705,7 @@ GameObject:
   - component: {fileID: 529527300}
   - component: {fileID: 529527302}
   - component: {fileID: 529527301}
+  - component: {fileID: 529527303}
   m_Layer: 0
   m_Name: pressure tile_0 (1)
   m_TagString: Untagged
@@ -8396,6 +8833,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &529527303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529527299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 529527300}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &569861992
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,6 +10403,8 @@ GameObject:
   - component: {fileID: 626652574}
   - component: {fileID: 626652576}
   - component: {fileID: 626652575}
+  - component: {fileID: 626652578}
+  - component: {fileID: 626652577}
   m_Layer: 3
   m_Name: platform 3_0 (7)
   m_TagString: Untagged
@@ -10068,6 +10532,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &626652577
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626652573}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &626652578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626652573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &630014701
 GameObject:
   m_ObjectHideFlags: 0
@@ -10950,6 +11455,8 @@ GameObject:
   - component: {fileID: 668055653}
   - component: {fileID: 668055655}
   - component: {fileID: 668055654}
+  - component: {fileID: 668055657}
+  - component: {fileID: 668055656}
   m_Layer: 3
   m_Name: platform 3_0 (1)
   m_TagString: Untagged
@@ -11077,6 +11584,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &668055656
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668055652}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &668055657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668055652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &684276928
 GameObject:
   m_ObjectHideFlags: 0
@@ -11086,7 +11634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684276929}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plateform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11189,6 +11737,8 @@ GameObject:
   - component: {fileID: 684511725}
   - component: {fileID: 684511727}
   - component: {fileID: 684511726}
+  - component: {fileID: 684511729}
+  - component: {fileID: 684511728}
   m_Layer: 3
   m_Name: platform 4_0 (8)
   m_TagString: Untagged
@@ -11316,6 +11866,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &684511728
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684511724}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &684511729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684511724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &689023074
 GameObject:
   m_ObjectHideFlags: 0
@@ -11327,6 +11918,8 @@ GameObject:
   - component: {fileID: 689023075}
   - component: {fileID: 689023077}
   - component: {fileID: 689023076}
+  - component: {fileID: 689023079}
+  - component: {fileID: 689023078}
   m_Layer: 3
   m_Name: platform 4_0 (7)
   m_TagString: Untagged
@@ -11454,6 +12047,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &689023078
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689023074}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &689023079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689023074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &689446620
 GameObject:
   m_ObjectHideFlags: 0
@@ -11465,6 +12099,7 @@ GameObject:
   - component: {fileID: 689446621}
   - component: {fileID: 689446623}
   - component: {fileID: 689446622}
+  - component: {fileID: 689446624}
   m_Layer: 0
   m_Name: pressure tile_0 (8)
   m_TagString: Untagged
@@ -11592,6 +12227,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &689446624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689446620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 689446621}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &694888574
 GameObject:
   m_ObjectHideFlags: 0
@@ -11741,7 +12401,7 @@ GameObject:
   - component: {fileID: 702349469}
   - component: {fileID: 702349471}
   - component: {fileID: 702349470}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform 2_0 (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12017,6 +12677,8 @@ GameObject:
   - component: {fileID: 710359681}
   - component: {fileID: 710359683}
   - component: {fileID: 710359682}
+  - component: {fileID: 710359685}
+  - component: {fileID: 710359684}
   m_Layer: 3
   m_Name: platform 3_0 (10)
   m_TagString: Untagged
@@ -12144,6 +12806,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &710359684
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710359680}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &710359685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710359680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &720853986
 GameObject:
   m_ObjectHideFlags: 0
@@ -12936,6 +13639,7 @@ GameObject:
   - component: {fileID: 774029958}
   - component: {fileID: 774029960}
   - component: {fileID: 774029959}
+  - component: {fileID: 774029961}
   m_Layer: 0
   m_Name: pressure tile_0 (7)
   m_TagString: Untagged
@@ -13063,6 +13767,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &774029961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774029957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 774029958}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &778121300
 GameObject:
   m_ObjectHideFlags: 0
@@ -13466,6 +14195,7 @@ GameObject:
   - component: {fileID: 803475147}
   - component: {fileID: 803475149}
   - component: {fileID: 803475148}
+  - component: {fileID: 803475150}
   m_Layer: 0
   m_Name: pressure tile_0 (6)
   m_TagString: Untagged
@@ -13593,6 +14323,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &803475150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803475146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 803475147}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &804024452
 GameObject:
   m_ObjectHideFlags: 0
@@ -14779,6 +15534,8 @@ GameObject:
   - component: {fileID: 827074255}
   - component: {fileID: 827074257}
   - component: {fileID: 827074256}
+  - component: {fileID: 827074259}
+  - component: {fileID: 827074258}
   m_Layer: 3
   m_Name: platform 4_0 (12)
   m_TagString: Untagged
@@ -14906,6 +15663,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &827074258
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827074254}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &827074259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827074254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &831349576
 GameObject:
   m_ObjectHideFlags: 0
@@ -15141,6 +15939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844257716}
   - component: {fileID: 844257717}
+  - component: {fileID: 844257718}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -15222,6 +16021,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &844257718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844257715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &856419574
 GameObject:
   m_ObjectHideFlags: 0
@@ -15967,6 +16781,8 @@ GameObject:
   - component: {fileID: 919165069}
   - component: {fileID: 919165071}
   - component: {fileID: 919165070}
+  - component: {fileID: 919165073}
+  - component: {fileID: 919165072}
   m_Layer: 3
   m_Name: platform 3_0 (6)
   m_TagString: Untagged
@@ -16094,6 +16910,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &919165072
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919165068}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &919165073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919165068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &927701168
 GameObject:
   m_ObjectHideFlags: 0
@@ -16610,6 +17467,8 @@ GameObject:
   - component: {fileID: 992449312}
   - component: {fileID: 992449314}
   - component: {fileID: 992449313}
+  - component: {fileID: 992449316}
+  - component: {fileID: 992449315}
   m_Layer: 3
   m_Name: platform 4_0 (13)
   m_TagString: Untagged
@@ -16737,6 +17596,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &992449315
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992449311}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &992449316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992449311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &992694238
 GameObject:
   m_ObjectHideFlags: 0
@@ -16748,6 +17648,8 @@ GameObject:
   - component: {fileID: 992694239}
   - component: {fileID: 992694241}
   - component: {fileID: 992694240}
+  - component: {fileID: 992694243}
+  - component: {fileID: 992694242}
   m_Layer: 3
   m_Name: platform 3_0 (15)
   m_TagString: Untagged
@@ -16875,6 +17777,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &992694242
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992694238}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &992694243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992694238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1007914191
 GameObject:
   m_ObjectHideFlags: 0
@@ -16886,6 +17829,8 @@ GameObject:
   - component: {fileID: 1007914192}
   - component: {fileID: 1007914194}
   - component: {fileID: 1007914193}
+  - component: {fileID: 1007914196}
+  - component: {fileID: 1007914195}
   m_Layer: 3
   m_Name: platform 3_0 (14)
   m_TagString: Untagged
@@ -17013,6 +17958,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1007914195
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007914191}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1007914196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007914191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1027998869
 GameObject:
   m_ObjectHideFlags: 0
@@ -17162,6 +18148,7 @@ GameObject:
   - component: {fileID: 1029647215}
   - component: {fileID: 1029647217}
   - component: {fileID: 1029647216}
+  - component: {fileID: 1029647218}
   m_Layer: 0
   m_Name: pressure tile_0 (4)
   m_TagString: Untagged
@@ -17289,6 +18276,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1029647218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029647214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 1029647215}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1042315414
 GameObject:
   m_ObjectHideFlags: 0
@@ -17300,6 +18312,8 @@ GameObject:
   - component: {fileID: 1042315415}
   - component: {fileID: 1042315417}
   - component: {fileID: 1042315416}
+  - component: {fileID: 1042315419}
+  - component: {fileID: 1042315418}
   m_Layer: 3
   m_Name: platform 3_0 (12)
   m_TagString: Untagged
@@ -17427,6 +18441,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1042315418
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042315414}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1042315419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042315414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1049843365
 GameObject:
   m_ObjectHideFlags: 0
@@ -17970,6 +19025,8 @@ GameObject:
   - component: {fileID: 1087173919}
   - component: {fileID: 1087173921}
   - component: {fileID: 1087173920}
+  - component: {fileID: 1087173923}
+  - component: {fileID: 1087173922}
   m_Layer: 3
   m_Name: platform 4_0 (2)
   m_TagString: Untagged
@@ -18097,6 +19154,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1087173922
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087173918}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1087173923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087173918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1090729646
 GameObject:
   m_ObjectHideFlags: 0
@@ -19882,6 +20980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1211872653}
   - component: {fileID: 1211872654}
+  - component: {fileID: 1211872655}
   m_Layer: 0
   m_Name: Circle (3)
   m_TagString: Untagged
@@ -19963,6 +21062,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1211872655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211872652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1217321436
 GameObject:
   m_ObjectHideFlags: 0
@@ -20112,6 +21226,7 @@ GameObject:
   - component: {fileID: 1225581232}
   - component: {fileID: 1225581234}
   - component: {fileID: 1225581233}
+  - component: {fileID: 1225581235}
   m_Layer: 0
   m_Name: pressure tile_0 (12)
   m_TagString: Untagged
@@ -20239,6 +21354,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1225581235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225581231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 1225581232}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1232899030
 GameObject:
   m_ObjectHideFlags: 0
@@ -20748,6 +21888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252851334}
   - component: {fileID: 1252851335}
+  - component: {fileID: 1252851336}
   m_Layer: 0
   m_Name: Circle (6)
   m_TagString: Untagged
@@ -20829,6 +21970,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1252851336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252851333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1259519911
 GameObject:
   m_ObjectHideFlags: 0
@@ -21116,6 +22272,7 @@ GameObject:
   - component: {fileID: 1264641201}
   - component: {fileID: 1264641200}
   - component: {fileID: 1264641199}
+  - component: {fileID: 1264641202}
   m_Layer: 0
   m_Name: pressure tile_0
   m_TagString: Untagged
@@ -21243,6 +22400,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 645139709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264641202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264641198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 1264641201}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1271300243
 GameObject:
   m_ObjectHideFlags: 0
@@ -21806,6 +22988,8 @@ GameObject:
   - component: {fileID: 1323374899}
   - component: {fileID: 1323374901}
   - component: {fileID: 1323374900}
+  - component: {fileID: 1323374903}
+  - component: {fileID: 1323374902}
   m_Layer: 3
   m_Name: platform 4_0 (14)
   m_TagString: Untagged
@@ -21933,6 +23117,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1323374902
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323374898}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1323374903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323374898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1335432350
 GameObject:
   m_ObjectHideFlags: 0
@@ -21944,6 +23169,7 @@ GameObject:
   - component: {fileID: 1335432351}
   - component: {fileID: 1335432353}
   - component: {fileID: 1335432352}
+  - component: {fileID: 1335432354}
   m_Layer: 0
   m_Name: pressure tile_0 (11)
   m_TagString: Untagged
@@ -22071,6 +23297,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1335432354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335432350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 1335432351}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1341194098
 GameObject:
   m_ObjectHideFlags: 0
@@ -22173,6 +23424,8 @@ GameObject:
   - component: {fileID: 1342127827}
   - component: {fileID: 1342127829}
   - component: {fileID: 1342127828}
+  - component: {fileID: 1342127831}
+  - component: {fileID: 1342127830}
   m_Layer: 3
   m_Name: platform 4_0 (6)
   m_TagString: Untagged
@@ -22300,6 +23553,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1342127830
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342127826}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1342127831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342127826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1353484135
 GameObject:
   m_ObjectHideFlags: 0
@@ -22907,6 +24201,8 @@ GameObject:
   - component: {fileID: 1376107575}
   - component: {fileID: 1376107577}
   - component: {fileID: 1376107576}
+  - component: {fileID: 1376107579}
+  - component: {fileID: 1376107578}
   m_Layer: 3
   m_Name: platform 4_0 (4)
   m_TagString: Untagged
@@ -23034,6 +24330,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1376107578
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376107574}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1376107579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376107574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1394499413
 GameObject:
   m_ObjectHideFlags: 0
@@ -23183,6 +24520,8 @@ GameObject:
   - component: {fileID: 1401951882}
   - component: {fileID: 1401951884}
   - component: {fileID: 1401951883}
+  - component: {fileID: 1401951886}
+  - component: {fileID: 1401951885}
   m_Layer: 3
   m_Name: platform 4_0 (9)
   m_TagString: Untagged
@@ -23310,6 +24649,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1401951885
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401951881}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1401951886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401951881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1405158070
 GameObject:
   m_ObjectHideFlags: 0
@@ -23735,6 +25115,7 @@ GameObject:
   - component: {fileID: 1415066056}
   - component: {fileID: 1415066058}
   - component: {fileID: 1415066057}
+  - component: {fileID: 1415066059}
   m_Layer: 0
   m_Name: pressure tile_0 (5)
   m_TagString: Untagged
@@ -23862,6 +25243,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1415066059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415066055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 1415066056}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1415677334
 GameObject:
   m_ObjectHideFlags: 0
@@ -26610,6 +28016,7 @@ GameObject:
   - component: {fileID: 1595411325}
   - component: {fileID: 1595411327}
   - component: {fileID: 1595411326}
+  - component: {fileID: 1595411328}
   m_Layer: 0
   m_Name: pressure tile_0 (14)
   m_TagString: Untagged
@@ -26737,6 +28144,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1595411328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595411324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
+  requiredWeight: 5
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  plateVisual: {fileID: 1595411325}
+  sinkDistance: 0.1
+  sinkSpeed: 5
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1597347762
 GameObject:
   m_ObjectHideFlags: 0
@@ -26976,6 +28408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608790576}
   - component: {fileID: 1608790577}
+  - component: {fileID: 1608790578}
   m_Layer: 0
   m_Name: Circle (5)
   m_TagString: Untagged
@@ -27057,6 +28490,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1608790578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608790575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1614709482
 GameObject:
   m_ObjectHideFlags: 0
@@ -27344,6 +28792,8 @@ GameObject:
   - component: {fileID: 1634626709}
   - component: {fileID: 1634626711}
   - component: {fileID: 1634626710}
+  - component: {fileID: 1634626713}
+  - component: {fileID: 1634626712}
   m_Layer: 3
   m_Name: platform 4_0
   m_TagString: Untagged
@@ -27471,6 +28921,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1634626712
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634626708}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1634626713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634626708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1644782567
 GameObject:
   m_ObjectHideFlags: 0
@@ -27620,6 +29111,8 @@ GameObject:
   - component: {fileID: 1647267736}
   - component: {fileID: 1647267738}
   - component: {fileID: 1647267737}
+  - component: {fileID: 1647267740}
+  - component: {fileID: 1647267739}
   m_Layer: 3
   m_Name: platform 3_0 (4)
   m_TagString: Untagged
@@ -27747,6 +29240,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1647267739
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647267735}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1647267740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647267735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1653088594
 GameObject:
   m_ObjectHideFlags: 0
@@ -27987,6 +29521,8 @@ GameObject:
   - component: {fileID: 1678787354}
   - component: {fileID: 1678787356}
   - component: {fileID: 1678787355}
+  - component: {fileID: 1678787358}
+  - component: {fileID: 1678787357}
   m_Layer: 3
   m_Name: platform 4_0 (10)
   m_TagString: Untagged
@@ -28114,6 +29650,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1678787357
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678787353}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1678787358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678787353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1687980035
 GameObject:
   m_ObjectHideFlags: 0
@@ -28629,6 +30206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708012249}
   - component: {fileID: 1708012250}
+  - component: {fileID: 1708012251}
   m_Layer: 0
   m_Name: Circle (2)
   m_TagString: Untagged
@@ -28710,6 +30288,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1708012251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708012248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0192ebc046b63924f8ce0da0255a28ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableButton
+  bossController: {fileID: 0}
+  buttonSpriteRenderer: {fileID: 0}
+  activatedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1710211282
 GameObject:
   m_ObjectHideFlags: 0
@@ -29762,6 +31355,8 @@ GameObject:
   - component: {fileID: 1824106454}
   - component: {fileID: 1824106456}
   - component: {fileID: 1824106455}
+  - component: {fileID: 1824106458}
+  - component: {fileID: 1824106457}
   m_Layer: 3
   m_Name: platform 3_0 (13)
   m_TagString: Untagged
@@ -29889,6 +31484,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1824106457
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824106453}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1824106458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824106453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1827219114
 GameObject:
   m_ObjectHideFlags: 0
@@ -30982,6 +32618,8 @@ GameObject:
   - component: {fileID: 1897159415}
   - component: {fileID: 1897159417}
   - component: {fileID: 1897159416}
+  - component: {fileID: 1897159419}
+  - component: {fileID: 1897159418}
   m_Layer: 3
   m_Name: platform 3_0 (5)
   m_TagString: Untagged
@@ -31109,6 +32747,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1897159418
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897159414}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1897159419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897159414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1903368704
 GameObject:
   m_ObjectHideFlags: 0
@@ -31429,6 +33108,8 @@ GameObject:
   - component: {fileID: 1950457841}
   - component: {fileID: 1950457843}
   - component: {fileID: 1950457842}
+  - component: {fileID: 1950457845}
+  - component: {fileID: 1950457844}
   m_Layer: 3
   m_Name: platform 3_0 (2)
   m_TagString: Untagged
@@ -31556,6 +33237,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1950457844
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950457840}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1950457845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950457840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1950992404
 GameObject:
   m_ObjectHideFlags: 0
@@ -31796,6 +33518,8 @@ GameObject:
   - component: {fileID: 1987267757}
   - component: {fileID: 1987267759}
   - component: {fileID: 1987267758}
+  - component: {fileID: 1987267761}
+  - component: {fileID: 1987267760}
   m_Layer: 3
   m_Name: platform 4_0 (3)
   m_TagString: Untagged
@@ -31923,6 +33647,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &1987267760
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987267756}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1987267761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987267756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &1989535647
 GameObject:
   m_ObjectHideFlags: 0
@@ -33493,7 +35258,7 @@ GameObject:
   - component: {fileID: 2069420391}
   - component: {fileID: 2069420393}
   - component: {fileID: 2069420392}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform 2_0 (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33631,7 +35396,7 @@ GameObject:
   - component: {fileID: 2072355986}
   - component: {fileID: 2072355988}
   - component: {fileID: 2072355987}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform 2_0 (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34776,6 +36541,8 @@ GameObject:
   - component: {fileID: 2110120414}
   - component: {fileID: 2110120416}
   - component: {fileID: 2110120415}
+  - component: {fileID: 2110120418}
+  - component: {fileID: 2110120417}
   m_Layer: 3
   m_Name: platform 4_0 (11)
   m_TagString: Untagged
@@ -34903,6 +36670,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &2110120417
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110120413}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2110120418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110120413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  moveDistance: 3
+  speed: 2
 --- !u!1 &2116245391
 GameObject:
   m_ObjectHideFlags: 0
