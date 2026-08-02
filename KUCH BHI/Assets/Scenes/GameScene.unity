@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 714495}
   - component: {fileID: 714497}
   - component: {fileID: 714496}
-  - component: {fileID: 714498}
   m_Layer: 0
   m_Name: pressure tile_0 (13)
   m_TagString: Untagged
@@ -258,33 +257,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &714498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 714495}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &9969880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,7 +1570,6 @@ GameObject:
   - component: {fileID: 89252011}
   - component: {fileID: 89252013}
   - component: {fileID: 89252012}
-  - component: {fileID: 89252014}
   m_Layer: 0
   m_Name: pressure tile_0 (3)
   m_TagString: Untagged
@@ -1726,33 +1697,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &89252014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89252010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 89252011}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &112399482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,7 +1890,6 @@ GameObject:
   - component: {fileID: 120560909}
   - component: {fileID: 120560911}
   - component: {fileID: 120560910}
-  - component: {fileID: 120560912}
   m_Layer: 0
   m_Name: pressure tile_0 (9)
   m_TagString: Untagged
@@ -2074,33 +2017,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &120560912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120560908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 120560909}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &130959262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2336,6 @@ GameObject:
   - component: {fileID: 145800019}
   - component: {fileID: 145800021}
   - component: {fileID: 145800020}
-  - component: {fileID: 145800023}
   - component: {fileID: 145800022}
   m_Layer: 3
   m_Name: platform 3_0 (3)
@@ -2576,20 +2491,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &145800023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145800018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &157077335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,7 +2988,6 @@ GameObject:
   - component: {fileID: 171123553}
   - component: {fileID: 171123555}
   - component: {fileID: 171123554}
-  - component: {fileID: 171123557}
   - component: {fileID: 171123556}
   m_Layer: 3
   m_Name: platform 3_0 (8)
@@ -3243,20 +3143,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &171123557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171123552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &175007326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,7 +3245,6 @@ GameObject:
   - component: {fileID: 181157013}
   - component: {fileID: 181157015}
   - component: {fileID: 181157014}
-  - component: {fileID: 181157016}
   m_Layer: 0
   m_Name: pressure tile_0 (2)
   m_TagString: Untagged
@@ -3487,33 +3372,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &181157016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181157012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 181157013}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &183390826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,7 +3797,6 @@ GameObject:
   - component: {fileID: 219433530}
   - component: {fileID: 219433532}
   - component: {fileID: 219433531}
-  - component: {fileID: 219433534}
   - component: {fileID: 219433533}
   m_Layer: 3
   m_Name: platform 3_0 (11)
@@ -4095,20 +3952,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &219433534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219433529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &220569902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6551,7 +6394,6 @@ GameObject:
   - component: {fileID: 413918766}
   - component: {fileID: 413918768}
   - component: {fileID: 413918767}
-  - component: {fileID: 413918770}
   - component: {fileID: 413918769}
   m_Layer: 3
   m_Name: platform 3_0 (9)
@@ -6707,20 +6549,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &413918770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413918765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &418588293
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,7 +6560,6 @@ GameObject:
   - component: {fileID: 418588294}
   - component: {fileID: 418588296}
   - component: {fileID: 418588295}
-  - component: {fileID: 418588297}
   m_Layer: 0
   m_Name: pressure tile_0 (10)
   m_TagString: Untagged
@@ -6860,33 +6687,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &418588297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418588293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 418588294}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &421373355
 GameObject:
   m_ObjectHideFlags: 0
@@ -8587,7 +8387,6 @@ GameObject:
   - component: {fileID: 529527300}
   - component: {fileID: 529527302}
   - component: {fileID: 529527301}
-  - component: {fileID: 529527303}
   m_Layer: 0
   m_Name: pressure tile_0 (1)
   m_TagString: Untagged
@@ -8715,33 +8514,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &529527303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529527299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 529527300}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &550012595
 GameObject:
   m_ObjectHideFlags: 0
@@ -10198,7 +9970,6 @@ GameObject:
   - component: {fileID: 626652574}
   - component: {fileID: 626652576}
   - component: {fileID: 626652575}
-  - component: {fileID: 626652578}
   - component: {fileID: 626652577}
   m_Layer: 3
   m_Name: platform 3_0 (7)
@@ -10354,20 +10125,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &626652578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626652573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &627553505
 GameObject:
   m_ObjectHideFlags: 0
@@ -12153,7 +11910,6 @@ GameObject:
   - component: {fileID: 689446621}
   - component: {fileID: 689446623}
   - component: {fileID: 689446622}
-  - component: {fileID: 689446624}
   m_Layer: 0
   m_Name: pressure tile_0 (8)
   m_TagString: Untagged
@@ -12281,33 +12037,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &689446624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689446620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 689446621}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &694888574
 GameObject:
   m_ObjectHideFlags: 0
@@ -12733,7 +12462,6 @@ GameObject:
   - component: {fileID: 710359681}
   - component: {fileID: 710359683}
   - component: {fileID: 710359682}
-  - component: {fileID: 710359685}
   - component: {fileID: 710359684}
   m_Layer: 3
   m_Name: platform 3_0 (10)
@@ -12889,20 +12617,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &710359685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710359680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &720853986
 GameObject:
   m_ObjectHideFlags: 0
@@ -13695,7 +13409,6 @@ GameObject:
   - component: {fileID: 774029958}
   - component: {fileID: 774029960}
   - component: {fileID: 774029959}
-  - component: {fileID: 774029961}
   m_Layer: 0
   m_Name: pressure tile_0 (7)
   m_TagString: Untagged
@@ -13823,33 +13536,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &774029961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774029957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 774029958}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &778121300
 GameObject:
   m_ObjectHideFlags: 0
@@ -14074,7 +13760,6 @@ GameObject:
   - component: {fileID: 803475147}
   - component: {fileID: 803475149}
   - component: {fileID: 803475148}
-  - component: {fileID: 803475150}
   m_Layer: 0
   m_Name: pressure tile_0 (6)
   m_TagString: Untagged
@@ -14202,33 +13887,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &803475150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803475146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 803475147}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &804024452
 GameObject:
   m_ObjectHideFlags: 0
@@ -16503,7 +16161,6 @@ GameObject:
   - component: {fileID: 919165069}
   - component: {fileID: 919165071}
   - component: {fileID: 919165070}
-  - component: {fileID: 919165073}
   - component: {fileID: 919165072}
   m_Layer: 3
   m_Name: platform 3_0 (6)
@@ -16659,20 +16316,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &919165073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919165068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &927701168
 GameObject:
   m_ObjectHideFlags: 0
@@ -17461,7 +17104,6 @@ GameObject:
   - component: {fileID: 992694239}
   - component: {fileID: 992694241}
   - component: {fileID: 992694240}
-  - component: {fileID: 992694243}
   - component: {fileID: 992694242}
   m_Layer: 3
   m_Name: platform 3_0 (15)
@@ -17617,20 +17259,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &992694243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992694238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1007914191
 GameObject:
   m_ObjectHideFlags: 0
@@ -17642,7 +17270,6 @@ GameObject:
   - component: {fileID: 1007914192}
   - component: {fileID: 1007914194}
   - component: {fileID: 1007914193}
-  - component: {fileID: 1007914196}
   - component: {fileID: 1007914195}
   m_Layer: 3
   m_Name: platform 3_0 (14)
@@ -17798,20 +17425,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1007914196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007914191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1027998869
 GameObject:
   m_ObjectHideFlags: 0
@@ -17961,7 +17574,6 @@ GameObject:
   - component: {fileID: 1029647215}
   - component: {fileID: 1029647217}
   - component: {fileID: 1029647216}
-  - component: {fileID: 1029647218}
   m_Layer: 0
   m_Name: pressure tile_0 (4)
   m_TagString: Untagged
@@ -18089,33 +17701,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1029647218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029647214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 1029647215}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1042315414
 GameObject:
   m_ObjectHideFlags: 0
@@ -18127,7 +17712,6 @@ GameObject:
   - component: {fileID: 1042315415}
   - component: {fileID: 1042315417}
   - component: {fileID: 1042315416}
-  - component: {fileID: 1042315419}
   - component: {fileID: 1042315418}
   m_Layer: 3
   m_Name: platform 3_0 (12)
@@ -18283,20 +17867,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1042315419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042315414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1049843365
 GameObject:
   m_ObjectHideFlags: 0
@@ -21210,7 +20780,6 @@ GameObject:
   - component: {fileID: 1225581232}
   - component: {fileID: 1225581234}
   - component: {fileID: 1225581233}
-  - component: {fileID: 1225581235}
   m_Layer: 0
   m_Name: pressure tile_0 (12)
   m_TagString: Untagged
@@ -21338,33 +20907,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1225581235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225581231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 1225581232}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1232899030
 GameObject:
   m_ObjectHideFlags: 0
@@ -23069,7 +22611,6 @@ GameObject:
   - component: {fileID: 1335432351}
   - component: {fileID: 1335432353}
   - component: {fileID: 1335432352}
-  - component: {fileID: 1335432354}
   m_Layer: 0
   m_Name: pressure tile_0 (11)
   m_TagString: Untagged
@@ -23197,33 +22738,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1335432354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335432350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 1335432351}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1341194098
 GameObject:
   m_ObjectHideFlags: 0
@@ -25183,7 +24697,6 @@ GameObject:
   - component: {fileID: 1415066056}
   - component: {fileID: 1415066058}
   - component: {fileID: 1415066057}
-  - component: {fileID: 1415066059}
   m_Layer: 0
   m_Name: pressure tile_0 (5)
   m_TagString: Untagged
@@ -25311,33 +24824,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1415066059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415066055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 1415066056}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1415677334
 GameObject:
   m_ObjectHideFlags: 0
@@ -27910,7 +27396,6 @@ GameObject:
   - component: {fileID: 1595411325}
   - component: {fileID: 1595411327}
   - component: {fileID: 1595411326}
-  - component: {fileID: 1595411328}
   m_Layer: 0
   m_Name: pressure tile_0 (14)
   m_TagString: Untagged
@@ -28038,33 +27523,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1595411328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595411324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b746f96a4d528844e9beaafda99a000a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  requiredWeight: 5
-  triggerLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  targetPlatform: {fileID: 0}
-  additionalPlatforms: []
-  plateVisual: {fileID: 1595411325}
-  sinkDistance: 0.1
-  sinkSpeed: 5
-  OnActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1597347762
 GameObject:
   m_ObjectHideFlags: 0
@@ -29173,7 +28631,6 @@ GameObject:
   - component: {fileID: 1647267736}
   - component: {fileID: 1647267738}
   - component: {fileID: 1647267737}
-  - component: {fileID: 1647267740}
   - component: {fileID: 1647267739}
   m_Layer: 3
   m_Name: platform 3_0 (4)
@@ -29329,20 +28786,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1647267740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647267735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1653088594
 GameObject:
   m_ObjectHideFlags: 0
@@ -31980,7 +31423,6 @@ GameObject:
   - component: {fileID: 1824106454}
   - component: {fileID: 1824106456}
   - component: {fileID: 1824106455}
-  - component: {fileID: 1824106458}
   - component: {fileID: 1824106457}
   m_Layer: 3
   m_Name: platform 3_0 (13)
@@ -32136,20 +31578,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1824106458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824106453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1827219114
 GameObject:
   m_ObjectHideFlags: 0
@@ -33230,7 +32658,6 @@ GameObject:
   - component: {fileID: 1897159415}
   - component: {fileID: 1897159417}
   - component: {fileID: 1897159416}
-  - component: {fileID: 1897159419}
   - component: {fileID: 1897159418}
   m_Layer: 3
   m_Name: platform 3_0 (5)
@@ -33386,20 +32813,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1897159419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897159414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1903368704
 GameObject:
   m_ObjectHideFlags: 0
@@ -33924,7 +33337,6 @@ GameObject:
   - component: {fileID: 1950457841}
   - component: {fileID: 1950457843}
   - component: {fileID: 1950457842}
-  - component: {fileID: 1950457845}
   - component: {fileID: 1950457844}
   m_Layer: 3
   m_Name: platform 3_0 (2)
@@ -34080,20 +33492,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1950457845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950457840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ea08f43482d9046b98ae8a232c5912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
-  moveDistance: 3
-  speed: 0.5
 --- !u!1 &1950992404
 GameObject:
   m_ObjectHideFlags: 0
